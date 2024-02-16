@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Piedra, Papel o Tijeras</title>
+     
+    </head>
+    <body style="background-color: black; color: blueviolet;">
+        <h1>JUEGO DE PIEDRA PAPEL O TIJERAS</h1>
+    
+        <script>
+            //opciones a escoger piedra= 1, papel=2, tijeras=3
+            //Eleccion del jugador
+            let opcionDelJugador = 0;
+            opcionDelJugador = prompt("Elige: 1 para 🌑, 2 para 📃, 3 para ✂");
+            let opcionDeLaComputadora = 0;
+            opcionDeLaComputadora = Math.floor(Math.random() * 3) + 1;
+
+            if (opcionDelJugador == 1){
+                alert("elegiste Piedra 🌑 ");
+            }      
+            else if (opcionDelJugador == 2){
+                alert("elegiste Papel 📃");
+            }
+            else if (opcionDelJugador == 3){
+                alert("elegiste Tijeras ✂");
+            }
+            else{
+                alert("Esta no es una opcion valida, FIN DEL JUEGO");
+            }
+            //opciones a escoger piedra= 1, papel=2, tijeras=3
+            //sabemos que : Piedra gana Tijera, Piedra pierde contra Pepel, Piedra empata con Piedra 
+            // Esto es igual a : Para PIEDRA 🌑= 1gana3; 1pierde2, 1empata1
+            
+            //sabemos que : Papel gana Piedra, Papel pierde contra Tijera, Papel empata con Papel
+            // Esto es igual a : Para PAPEL 📃 = 2gana1; 2pierde3, 2empata2
+            
+            //sabemos que : Tijera gana Papel, Tijera pierde contra Piedra, Tijera empata con tijera
+            // Esto es igual a : Para TIJERA ✂ = 3gana2; 3pierde1, 3empata3
+
+            if (opcionDelJugador == opcionDeLaComputadora){
+                alert( "EMPATE")
+            }
+            else if (opcionDelJugador == 1 && opcionDeLaComputadora == 3){
+                alert(" ¡¡ 🎉 HAS GANADO 🎉!! Tu ejegiste: 🌑 " + " la computadora eligio: ✂" );
+            }
+            else if (opcionDelJugador == 1 && opcionDeLaComputadora == 2){
+                alert(" Perdiste 😥  Tu ejegiste: 🌑" + " la computadora eligio: 📃" );
+            }
+            else if (opcionDelJugador == 2 && opcionDeLaComputadora == 1){
+                alert(" ¡¡ 🎉 HAS GANADO 🎉!! Tu ejegiste: 📃" + " la computadora eligio: 🌑" );
+            }
+            else if (opcionDelJugador == 2 && opcionDeLaComputadora == 3){
+                alert(" Perdiste 😥   Tu ejegiste: 📃" + " la computadora eligio: ✂" );
+            }
+            else if (opcionDelJugador == 3 && opcionDeLaComputadora == 2){
+                alert(" ¡¡ 🎉 HAS GANADO 🎉!! Tu ejegiste: ✂" + " la computadora eligio: 📃" );
+            }
+            else if (opcionDelJugador == 3 && opcionDeLaComputadora == 1){
+                alert(" Perdiste 😥   Tu ejegiste: ✂" + " la computadora eligio: 🌑" );
+            }
+
+        </script>
+    </body>
+
+
+</html>
